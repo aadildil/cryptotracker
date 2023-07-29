@@ -19,7 +19,7 @@ const logo=document.querySelector(".logo>a");
 const header=document.querySelector(".header");
 const menuButtons=document.getElementsByClassName("menu-buttons");
 const tabHeadings=document.getElementsByClassName("tab-heading");
-const coinTitles=document.querySelectorAll("td b");
+
 
 
 
@@ -54,6 +54,7 @@ listTab.addEventListener("click", () => {
 //for dark mode
 darkModeCheckBox.addEventListener("input", () => {
 
+    const coinTitles=document.querySelectorAll("td b");
     //dark mode
     if (document.body.style.backgroundColor === "white") {
        
@@ -66,7 +67,7 @@ darkModeCheckBox.addEventListener("input", () => {
             
         });
         coinTitles.forEach(title=>{
-            title.style.color="white    ";
+            title.style.color="white";
         })
        
 
