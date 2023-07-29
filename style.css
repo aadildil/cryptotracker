@@ -1,0 +1,480 @@
+body {
+    background-color: black;
+
+    font-family: 'Inter', sans-serif;
+    width: 100vw;
+    
+    text-rendering: optimizeLegibility;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+:root
+{
+    --primary-color:white;
+    
+}
+
+.logo>a{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+/* Style the toggle switch */
+.dark-mode-toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
+
+/* Hide the default checkbox input */
+.toggle-checkbox {
+    display: none;
+}
+
+/* Style the toggle slider */
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+/* Style the toggle slider when it's checked (dark mode) */
+.toggle-checkbox:checked+.toggle-label {
+    background-color: #169fc1;
+}
+
+/* Style the toggle slider's knob */
+.toggle-label::before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 0px;
+    bottom: -1px;
+    background-color: rgb(61, 216, 230);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Move the toggle slider's knob to the right when checked (dark mode) */
+.toggle-checkbox:checked+.toggle-label::before {
+    transform: translateX(26px);
+}
+
+.header {
+    padding-right: 50px;
+   
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    padding-top: 5px;
+   padding-left: 5px;
+    padding-bottom: 10px;
+
+}
+menu{
+    padding-right: 10px;
+
+}
+
+.menu-buttons {
+    border: none;
+    color: lightgrey;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: all 0.3s    ;
+
+}
+.menu-buttons.white_bg
+{
+    background-color: white;
+    color: rgb(140, 140, 140);
+}
+.menu-buttons:hover
+{
+    background-color: #87878776;
+    cursor: pointer;
+}
+
+#dashboard {
+    padding: 5px 20px;
+    border: none;
+    background-color: #2196F3;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px; /* Half the height of the button */
+   
+}
+#dashboard:hover
+{
+    background-color: #59cbe87c;
+}
+.heading-container
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+.tab-heading
+{
+    color: rgb(167 167 167);
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    font-weight: 300;
+    font-size: 25px;
+}
+#tab1-heading
+{
+    border: none;
+    border-bottom: 1px solid #2196F3;
+    color: #2196F3;
+    
+    
+  
+}
+
+.tab-heading:hover
+{
+    background-color: #2f4b476f;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+
+}
+
+.container
+{
+    padding: 0px 20px;
+    align-items: center;
+    justify-items: center ;
+    width: 95vw;
+    position: relative;
+}
+.container-grid
+{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(270px, 1fr));
+    width: 90vw;
+    align-items: center;
+    justify-items: center ;
+    gap: 30px;
+    
+    
+   
+    text-align: center ;
+
+    
+   
+
+}
+.card
+{
+    
+   
+   
+    display: flex;
+    
+    flex-direction: column;
+    
+    background-color: rgb(44, 44, 44);
+    border-radius: 5px;
+    
+    gap: 1rem;
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    margin-top: 40px;
+}
+
+.card:hover
+{
+    background-color: rgba(34, 34, 34, 0.866);
+}
+.card-hero
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+.coin-logos
+{
+    height: 70px;
+    
+}
+.card-titles
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: left;
+}
+.card-titles>b
+{
+    font-size: 30px;
+}
+.card-titles>p
+{
+margin: 0px;
+font-size: 20px;
+color: rgb(161, 161, 161);
+}
+.rate-container
+{
+    padding: 5px;
+    content: "";
+    color:rgb(61, 133, 62) ;
+    border: 2px solid rgb(61, 133, 62);
+    border-radius: 50px;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.price-container
+{
+    text-align: left;
+}
+.price
+{
+    color:rgb(89, 195, 91) ;
+    font-size: 25px;
+    text-align: left;
+}
+.volume-container
+{
+    text-align: left;
+}
+.volume-container>span
+{
+    color: rgb(161, 161, 161);
+    font-size: 17px;
+}
+.market-container
+{
+    text-align: left;
+}
+.market-container>span
+{
+    color: rgb(161, 161, 161);
+    font-size: 17px;
+}
+.container-list
+{
+    
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    
+    visibility: hidden;
+    z-index: 10 ;
+   
+    
+   
+}
+table
+{
+    border: none;
+}
+table td
+{
+    padding: 20px;
+    border: none;
+}
+.rate-list
+{
+    color:rgb(61, 133, 62) ;
+}
+tr
+{
+    transition: background-color 0.3s ;
+    border: none;
+}
+tr:hover
+{
+    background-color: rgba(33, 31, 31, 0.384);
+}
+
+
+@media screen and (max-width:640px)  {
+
+    .logo>a
+    {
+        font-size: 15px;
+       
+    }
+    .tab-heading
+    {
+        font-size: 10px;
+    }
+    .menu-buttons{
+        font-size: 8px;
+    }
+    #dashboard
+    {
+        font-size: 8px;
+    }
+    .header
+    {
+        justify-content: space-between;
+    }
+    .dark-mode-toggle {
+        
+        width: 20px;
+        height: 7px;
+    }
+    .toggle-label::before {
+       
+        height: 8px;
+        width: 8px;
+        left: -1px;
+        bottom: -1px;
+        
+    }
+    .toggle-checkbox:checked+.toggle-label::before {
+        transform: translateX(13px);
+    }
+    
+    table td
+    {
+        padding: 5px;
+        
+    }
+    td .coin-logos
+    {
+        height: 30px;
+    }
+    td .card-titles>b
+    {
+        font-size:10px ;
+    }
+    td .card-titles>p
+    {
+        font-size: 7px;
+    }
+    td .rate-container
+    {
+        padding: 3px;
+        font-size: 10px;
+        width: 50px;
+    }
+    td .price
+    {
+      
+        font-size: 13px;
+        
+    }
+
+    td .volume-container>span
+    {
+        
+        font-size: 10px;
+    }
+    td .market-container>span
+    {
+      
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:641px)  {
+
+    .logo>a
+    {
+        font-size: 20px;
+       
+    }
+    .tab-heading
+    {
+        font-size: 12px;
+    }
+    .menu-buttons{
+        font-size: 10px;
+    }
+    #dashboard
+    {
+        font-size: 10px;
+    }
+    .header
+    {
+        justify-content: space-between;
+    }
+    .dark-mode-toggle {
+        
+        width: 30px;
+        height: 12px;
+    }
+    .toggle-label::before {
+       
+        height: 12px;
+        width: 12px;
+        left: -1px;
+        bottom: -1px;
+        
+    }
+    .toggle-checkbox:checked+.toggle-label::before {
+        transform: translateX(19px);
+    }
+
+    table td
+    {
+        padding: 5px;
+        
+    }
+    td .coin-logos
+    {
+        height: 50px;
+    }
+    td .card-titles>b
+    {
+        font-size:15px ;
+    }
+    td .card-titles>p
+    {
+        font-size: 10px;
+    }
+    td .rate-container
+    {
+        padding: 4px;
+        font-size: 15px;
+        width: 70px;
+    }
+    td .price
+    {
+      
+        font-size: 18px;
+        
+    }
+
+    td .volume-container>span
+    {
+        
+        font-size: 13px;
+    }
+    td .market-container>span
+    {
+      
+        font-size: 13px;
+    }
+}
